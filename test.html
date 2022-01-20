@@ -20,9 +20,10 @@
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/font/bootstrap-icons.css">
   <link rel="stylesheet" href="assets/vendor/aos/dist/aos.css">
 
-  <!-- CSS Student Energy Template -->
+  <!-- CSS Front Template -->
   <link rel="stylesheet" href="assets/css/theme.minc619.css?v=1.0">
-  <link rel="stylesheet" href="assets/css/extra.css">
+    <link rel="stylesheet" href="assets/css/extra.css">
+    <link rel="stylesheet" href="./node_modules/leaflet/dist/leaflet.css">
 </head>
 
 <body>
@@ -63,11 +64,11 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Activities</a>
+              <a class="nav-link" href="#tab-content">Activities</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Venue</a>
+              <a class="nav-link" href="#contactsSection">Venue</a>
             </li>
 
           </ul>
@@ -77,6 +78,8 @@
     </div>
   </header>
   <!-- End Header -->
+
+  <!-- ========== END HEADER ========== -->
 
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
@@ -410,21 +413,15 @@
           <!-- Nav -->
           <ul class="nav nav-segment nav-pills" id="eventCalendarTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <a class="nav-link active" href="#eventCalendarOne" id="eventCalendarOne-tab" data-bs-toggle="tab"
-                data-bs-target="#eventCalendarOne" role="tab" aria-controls="eventCalendarOne" aria-selected="true">This
-                week</a>
+              <a class="nav-link active" href="#eventCalendarOne" id="eventCalendarOne-tab" data-bs-toggle="tab" data-bs-target="#eventCalendarOne" role="tab" aria-controls="eventCalendarOne" aria-selected="true">This week</a>
             </li>
 
             <li class="nav-item" role="presentation">
-              <a class="nav-link" href="#eventCalendarTwo" id="eventCalendarTwo-tab" data-bs-toggle="tab"
-                data-bs-target="#eventCalendarTwo" role="tab" aria-controls="eventCalendarTwo"
-                aria-selected="false">This month</a>
+              <a class="nav-link" href="#eventCalendarTwo" id="eventCalendarTwo-tab" data-bs-toggle="tab" data-bs-target="#eventCalendarTwo" role="tab" aria-controls="eventCalendarTwo" aria-selected="false">This month</a>
             </li>
 
             <li class="nav-item" role="presentation">
-              <a class="nav-link" href="#eventCalendarThree" id="eventCalendarThree-tab" data-bs-toggle="tab"
-                data-bs-target="#eventCalendarThree" role="tab" aria-controls="eventCalendarThree"
-                aria-selected="false">Next month</a>
+              <a class="nav-link" href="#eventCalendarThree" id="eventCalendarThree-tab" data-bs-toggle="tab" data-bs-target="#eventCalendarThree" role="tab" aria-controls="eventCalendarThree" aria-selected="false">Next month</a>
             </li>
           </ul>
           <!-- End Nav -->
@@ -731,6 +728,7 @@
       </div>
     </div>
     <!-- End Events -->
+    
 
     <!-- Map -->
     <div id="contactsSection" class="bg-light position-relative rounded-2 mx-3 mx-md-8">
@@ -1271,84 +1269,7 @@
       L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
         id: 'mapbox/light-v9'
       }).addTo(leaflet)
-    })
-
-    // INITIALIZATION OF SWIPER
-    // =======================================================
-    let activeIndex = 0
-    var sliderThumbs = new Swiper('.js-swiper-thumbs', {
-      slidesPerView: 1,
-      autoplay: false,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-      followFinger: false,
-      loop: true,
-      on: {
-        'slideChangeTransitionEnd': function (event) {
-          if (sliderMain === undefined) return
-          sliderMain.slideTo(event.activeIndex)
-        }
-      }
-    });
-
-    var sliderMain = new Swiper('.js-swiper-main', {
-      effect: 'fade',
-      autoplay: false,
-      disableOnInteraction: true,
-      loop: true,
-      navigation: {
-        nextEl: '.js-swiper-main-button-next',
-        prevEl: '.js-swiper-main-button-prev',
-      },
-      thumbs: {
-        swiper: sliderThumbs
-      },
-      on: {
-        'slideChangeTransitionEnd': function (event) {
-          if (sliderThumbs === undefined) return
-          sliderThumbs.slideTo(event.activeIndex)
-        }
-      }
-    })
-
-    // Clients
-    var swiper = new Swiper('.js-swiper-clients', {
-      slidesPerView: 2,
-      breakpoints: {
-        380: {
-          slidesPerView: 3,
-          spaceBetween: 15,
-        },
-        768: {
-          slidesPerView: 4,
-          spaceBetween: 15,
-        },
-        1024: {
-          slidesPerView: 5,
-          spaceBetween: 15,
-        },
-      },
-    });
-
-    // Card Grid
-    var swiper = new Swiper('.js-swiper-card-blocks', {
-      slidesPerView: 1,
-      pagination: {
-        el: '.js-swiper-card-blocks-pagination',
-        dynamicBullets: true,
-        clickable: true,
-      },
-      breakpoints: {
-        620: {
-          slidesPerView: 2,
-          spaceBetween: 15,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 15,
-        },
-      },
-    });
+    })()
   </script>
 </body>
 
