@@ -20,9 +20,10 @@
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/font/bootstrap-icons.css">
   <link rel="stylesheet" href="assets/vendor/aos/dist/aos.css">
 
-  <!-- CSS Student Energy Template -->
+  <!-- CSS Front Template -->
   <link rel="stylesheet" href="assets/css/theme.minc619.css?v=1.0">
-  <link rel="stylesheet" href="assets/css/extra.css">
+    <link rel="stylesheet" href="assets/css/extra.css">
+    <link rel="stylesheet" href="./node_modules/leaflet/dist/leaflet.css">
 </head>
 
 <body>
@@ -59,15 +60,15 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Register</a>
+              <a class="nav-link active" href="#register">Register</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Activities</a>
+              <a class="nav-link active" href="#eventsSection">Activities</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Venue</a>
+              <a class="nav-link active" href="#contactsSection">Venue</a>
             </li>
 
           </ul>
@@ -77,6 +78,8 @@
     </div>
   </header>
   <!-- End Header -->
+
+  <!-- ========== END HEADER ========== -->
 
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
@@ -100,15 +103,18 @@
     <!-- End Hero -->
 
 
-
     <!-- Hero -->
-    <div class="container position-relative content-space-t-2 content-space-t-md-2 content-space-t-lg-2">
+    <div class="container position-relative content-space-t-2 content-space-t-md-2 content-space-t-lg-2" id="register">
       <div class="row justify-content-lg-between align-items-lg-center">
         <div class="col-md-10 col-lg-5">
           <!-- Heading -->
           <div class="mb-7">
-            <h1 class="display-4 mb-3">JOIN THE MOVEMENT</h1>
+            <h1 class="display-4 mb-3">Rewrite Histroy</h1>
             <p class="lead">Student Energy empowers the next generation of leaders who are accelerating the transition to a sustainable, equitable energy future.</p>
+           
+            <div class="d-none d-lg-block">
+                <img class="img-fluid" src="Simages/oc-growing.svg" alt="Image Description">
+            </div>
           </div>
           <!-- End Title & Description -->
         </div>
@@ -166,7 +172,7 @@
                     <!-- Form -->
                     <div class="mb-4">
                       <label class="form-label" for="signupHeroFormFirstName">Mobile</label>
-                      <input type="text" class="form-control form-control-lg" name="signupHeroFormMobile"
+                      <input type="number" class="form-control form-control-lg" name="signupHeroFormMobile"
                         id="signupHeroFormMobile" placeholder="Mobile Number" aria-label="First name" required>
                       <span class="invalid-feedback">Your Mobile Number</span>
                     </div>
@@ -285,13 +291,12 @@
     <!-- Devices -->
     <div class="container">
       <div class="w-75 mx-auto mb-7">
-        <img class="img-fluid" src="assets/svg/components/three-pointers.svg" alt="SVG Arrow">
+        <img class="img-fluid" src="Simages/three-pointers.svg" alt="SVG Arrow">
       </div>
 
       <!-- Heading -->
       <div class="w-md-60 w-lg-50 text-center mx-auto mb-7">
-        <p><span class="text-dark fw-semi-bold">It is fast and easy.</span> Create your first and ongoing website with
-          Student Energy.</p>
+        <p><span class="text-dark fw-semi-bold">It is fast and easy.</span> Create your impact projects and plans with Student Energy.</p>
       </div>
       <!-- End Heading -->
 
@@ -340,7 +345,7 @@
                 <h2>Student Energy makes you look at things from a different perspectives</h2>
               </div>
 
-              <a class="btn btn-outline-primary" href="page-login.html">Sign up today</a>
+              <a class="btn btn-outline-primary" href="#register">Sign up today</a>
             </div>
             <!-- End Col -->
 
@@ -350,7 +355,7 @@
                 <!-- Browser Device -->
                 <figure class="device-browser-frame rotated-3d-left">
                   <div class="device-browser-frame">
-                    <img class="device-browser-img" src="assets/img/1618x1010/img5.jpg" alt="Image Description">
+                    <img class="device-browser-img" src="SimageS/classimagegoogle.jpg" alt="Image Description">
                   </div>
                 </figure>
                 <!-- End Browser Device -->
@@ -362,7 +367,7 @@
                 <!-- Browser Device -->
                 <figure class="device-browser-frame rotated-3d-left">
                   <div class="device-browser-frame">
-                    <img class="device-browser-img" src="assets/img/1618x1010/img4.jpg" alt="Image Description">
+                    <img class="device-browser-img" src="Simages/classimagegoogle.jpg" alt="Image Description">
                   </div>
                 </figure>
                 <!-- End Browser Device -->
@@ -380,17 +385,16 @@
     <!-- Testimonials -->
     <div class="container content-space-b-2 content-space-b-lg-3">
       <div class="text-center mb-5">
-        <img class="avatar avatar-lg avatar-4x3" src="assets/svg/illustrations/oc-person-3.svg" alt="Illustration">
+        <img class="avatar avatar-lg avatar-4x3" src="Simages/GLORY.jpg" alt="Illustration">
       </div>
 
       <!-- Blockquote -->
       <figure class="w-md-75 text-center mx-md-auto">
-        <blockquote class="blockquote">“ I just wanted to say that I'm very happy with my purchase of Student Energy so far.
-          The documentation is outstanding - clear and detailed. ”</blockquote>
+        <blockquote class="blockquote">“ I just wanted to say that I'm very happy that a joined Student Energy, it was really a big launch pad for me and my plans of making impact through the energy sector. ”</blockquote>
 
         <figcaption class="blockquote-footer text-center">
-          Philip
-          <span class="blockquote-footer-source">Product Manager | Mailchimp</span>
+          Glory Amadife
+          <span class="blockquote-footer-source">Business Developer | Switch Eletric and Gas</span>
         </figcaption>
       </figure>
       <!-- End Blockquote -->
@@ -410,21 +414,15 @@
           <!-- Nav -->
           <ul class="nav nav-segment nav-pills" id="eventCalendarTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <a class="nav-link active" href="#eventCalendarOne" id="eventCalendarOne-tab" data-bs-toggle="tab"
-                data-bs-target="#eventCalendarOne" role="tab" aria-controls="eventCalendarOne" aria-selected="true">This
-                week</a>
+              <a class="nav-link active" href="#eventCalendarOne" id="eventCalendarOne-tab" data-bs-toggle="tab" data-bs-target="#eventCalendarOne" role="tab" aria-controls="eventCalendarOne" aria-selected="true">This week</a>
             </li>
 
             <li class="nav-item" role="presentation">
-              <a class="nav-link" href="#eventCalendarTwo" id="eventCalendarTwo-tab" data-bs-toggle="tab"
-                data-bs-target="#eventCalendarTwo" role="tab" aria-controls="eventCalendarTwo"
-                aria-selected="false">This month</a>
+              <a class="nav-link" href="#eventCalendarTwo" id="eventCalendarTwo-tab" data-bs-toggle="tab" data-bs-target="#eventCalendarTwo" role="tab" aria-controls="eventCalendarTwo" aria-selected="false">This month</a>
             </li>
 
             <li class="nav-item" role="presentation">
-              <a class="nav-link" href="#eventCalendarThree" id="eventCalendarThree-tab" data-bs-toggle="tab"
-                data-bs-target="#eventCalendarThree" role="tab" aria-controls="eventCalendarThree"
-                aria-selected="false">Next month</a>
+              <a class="nav-link" href="#eventCalendarThree" id="eventCalendarThree-tab" data-bs-toggle="tab" data-bs-target="#eventCalendarThree" role="tab" aria-controls="eventCalendarThree" aria-selected="false">Next month</a>
             </li>
           </ul>
           <!-- End Nav -->
@@ -731,6 +729,7 @@
       </div>
     </div>
     <!-- End Events -->
+    
 
     <!-- Map -->
     <div id="contactsSection" class="bg-light position-relative rounded-2 mx-3 mx-md-8">
@@ -814,7 +813,7 @@
 
                   <div class="flex-grow-1">
                     <h5 class="mb-1">Visit us</h5>
-                    <span class="d-block small">University of Nigeria Nsukka campus</span>
+                    <span class="d-block small">Roar Nigeria hub, Ihe Nsukka 410105, Nsukka</span>
                   </div>
                 </div>
                 <!-- End Media -->
@@ -832,13 +831,13 @@
         <div id="map" class="leaflet" data-hs-leaflet-options='{
            "map": {
              "scrollWheelZoom": false,
-             "coords": [37.4040344, -122.0289704]
+             "coords": [6.865021242396814, 7.4063690142879794]
            },
            "marker": [
              {
-               "coords": [37.4040344, -122.0289704],
+               "coords": [6.865021242396814, 7.4063690142879794],
                "icon": {
-                 "iconUrl": "./assets/svg/components/map-pin.svg",
+                 "iconUrl": "Simages/map-pin.svg",
                  "iconSize": [50, 45]
                },
                "popup": {
@@ -1271,84 +1270,7 @@
       L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
         id: 'mapbox/light-v9'
       }).addTo(leaflet)
-    })
-
-    // INITIALIZATION OF SWIPER
-    // =======================================================
-    let activeIndex = 0
-    var sliderThumbs = new Swiper('.js-swiper-thumbs', {
-      slidesPerView: 1,
-      autoplay: false,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-      followFinger: false,
-      loop: true,
-      on: {
-        'slideChangeTransitionEnd': function (event) {
-          if (sliderMain === undefined) return
-          sliderMain.slideTo(event.activeIndex)
-        }
-      }
-    });
-
-    var sliderMain = new Swiper('.js-swiper-main', {
-      effect: 'fade',
-      autoplay: false,
-      disableOnInteraction: true,
-      loop: true,
-      navigation: {
-        nextEl: '.js-swiper-main-button-next',
-        prevEl: '.js-swiper-main-button-prev',
-      },
-      thumbs: {
-        swiper: sliderThumbs
-      },
-      on: {
-        'slideChangeTransitionEnd': function (event) {
-          if (sliderThumbs === undefined) return
-          sliderThumbs.slideTo(event.activeIndex)
-        }
-      }
-    })
-
-    // Clients
-    var swiper = new Swiper('.js-swiper-clients', {
-      slidesPerView: 2,
-      breakpoints: {
-        380: {
-          slidesPerView: 3,
-          spaceBetween: 15,
-        },
-        768: {
-          slidesPerView: 4,
-          spaceBetween: 15,
-        },
-        1024: {
-          slidesPerView: 5,
-          spaceBetween: 15,
-        },
-      },
-    });
-
-    // Card Grid
-    var swiper = new Swiper('.js-swiper-card-blocks', {
-      slidesPerView: 1,
-      pagination: {
-        el: '.js-swiper-card-blocks-pagination',
-        dynamicBullets: true,
-        clickable: true,
-      },
-      breakpoints: {
-        620: {
-          slidesPerView: 2,
-          spaceBetween: 15,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 15,
-        },
-      },
-    });
+    })()
   </script>
 </body>
 
