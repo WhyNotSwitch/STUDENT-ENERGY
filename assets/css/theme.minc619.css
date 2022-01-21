@@ -3319,13 +3319,13 @@ fieldset:disabled .btn {
   border-color: #21325b;
 }
 .btn-outline-primary {
-  color: #377dff;
-  border-color: #377dff;
+  color: #317db2;
+  border-color: #317db2;
 }
 .btn-outline-primary:hover {
   color: #fff;
-  background-color: #377dff;
-  border-color: #377dff;
+  background-color: #317db2;
+  border-color: #317db2;
 }
 .btn-check:focus + .btn-outline-primary,
 .btn-outline-primary:focus {
@@ -19769,7 +19769,7 @@ label.form-control {
   box-shadow: 0 0.375rem 1.5rem 0 rgba(140, 152, 164, 0.125);
 }
 .navbar.navbar-scrolled.navbar-dark {
-  background-color: #21325b;
+  background-color: #317db2;
 }
 .navbar-brand {
   padding-top: 0;
